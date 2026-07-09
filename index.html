@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love Youuuu ♡</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <button id="themeToggle" onclick="toggleTheme()" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+  🌙 Toggle Night
+</button>
+  <canvas id="sparkleCanvas"></canvas>
+  <audio id="bgMusic" autoplay loop preload="auto"><source src="song.mp3" type="audio/mpeg"></audio>
+
+  <!-- HOME PAGE CONTAINER -->
+  <div id="home-page">
+    <h1 class="main-header">For You and ME 🎀</h1>
+    <div class="bg-lyrics" id="lyricsContainer">
+      <!-- LYRICS REMAINED UNCHANGED -->
+      <p class="lyric-line" data-time="24.84">I look into your eyes</p>
+      <p class="lyric-line" data-time="28.27">So far away</p>
+      <p class="lyric-line" data-time="35.65">There's trouble on your mind</p>
+      <p class="lyric-line" data-time="39.39">You're losing faith</p>
+      <p class="lyric-line" data-time="45.38">Hey, now</p>
+      <p class="lyric-line" data-time="47.53">Let me hold you</p>
+      <p class="lyric-line" data-time="50.26">It'll be okay</p>
+      <p class="lyric-line" data-time="55.40">'Cause I will love you</p>
+      <p class="lyric-line" data-time="58.27">'Til they take my heart away</p>
+      <p class="lyric-line" data-time="62.68">Remember when you called</p>
+      <p class="lyric-line" data-time="66.31">And said goodbye</p>
+      <p class="lyric-line" data-time="73.48">You thought we'd lost it all</p>
+      <p class="lyric-line" data-time="77.10">And so did I</p>
+      <p class="lyric-line" data-time="83.15">Even if I'd lost you</p>
+      <p class="lyric-line" data-time="87.84">I would feel the same</p>
+      <p class="lyric-line" data-time="93.35">I will love you</p>
+      <p class="lyric-line" data-time="95.97">'Til they take my heart away</p>
+      <p class="lyric-line" data-time="101.47">Believe I'm here to stay</p>
+      <p class="lyric-line" data-time="109.74">I will love you</p>
+      <p class="lyric-line" data-time="112.37">'Til they take my heart away</p>
+      <p class="lyric-line" data-time="127.57">Now we're stronger than before</p>
+      <p class="lyric-line" data-time="131.58">We've made it through</p>
+      <p class="lyric-line" data-time="138.53">I've never felt more sure</p>
+      <p class="lyric-line" data-time="142.44">Because of you</p>
+      <p class="lyric-line" data-time="148.58">Hey now, are you listening?</p>
+      <p class="lyric-line" data-time="153.56">Can you hear me say?</p>
+      <p class="lyric-line" data-time="158.52">I will love you</p>
+      <p class="lyric-line" data-time="161.17">'Til they take my heart away</p>
+      <p class="lyric-line" data-time="166.62">Believe I'm here to stay</p>
+      <p class="lyric-line" data-time="174.86">I will love you</p>
+      <p class="lyric-line" data-time="177.50">'Til they take my heart away</p>
+      <p class="lyric-line" data-time="199.77">Believe in me, I'm here to stay</p>
+      <p class="lyric-line" data-time="210.43">I will love you</p>
+      <p class="lyric-line" data-time="213.26">'Til they take my heart away</p>
+      <p class="lyric-line" data-time="218.76">Away, away</p>
+      <p class="lyric-line" data-time="226.81">I will love you</p>
+      <p class="lyric-line" data-time="229.69">'Til they take my heart away</p>
+      <p class="lyric-line" data-time="232.23">Believe in me, I'm here to stay</p>
+      <p class="lyric-line" data-time="243.32">I will love you</p>
+      <p class="lyric-line" data-time="245.97">'Til they take my heart away</p>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="showGallery()">💌 Gallery of Happiness 🌸</button>
+    </div>
+  </div>
+
+  <!-- GALLERY PAGE CONTAINER -->
+  <div id="gallery-page" style="display: none; text-align: center; padding-top: 50px;">
+    <h1 class="main-header">Gallery of Happiness 🌸</h1>
+    <p style="color: #ff5fa2; font-size: 18px; margin-bottom: 30px;">Click on any photo card to flip it over! ✨</p>
+    <section class="photos">
+      <!-- Your photos will now align correctly with the CSS -->
+      <div class="polaroid-card" onclick="this.classList.toggle('flipped')"><div class="polaroid-inner"><div class="polaroid-front"><img src="images/photo1.jpg" alt="Memory 1"><h3>Babii 🌸</h3></div><div class="polaroid-back"><h3>Babii 🌸</h3><p>You are my favorite thought every single day.</p></div></div></div>
+      <div class="polaroid-card" onclick="this.classList.toggle('flipped')"><div class="polaroid-inner"><div class="polaroid-front"><img src="images/photo2.jpg" alt="Memory 2"><h3>Ms. Sungittt 💕</h3></div><div class="polaroid-back"><h3>Ms. Sungittt 💕</h3><p>I LOVE YOU Even when you're being a little sungit. :P</p></div></div></div>
+      <div class="polaroid-card" onclick="this.classList.toggle('flipped')"><div class="polaroid-inner"><div class="polaroid-front"><img src="images/photo3.jpg" alt="Memory 3"><h3> Babyyy🍓</h3></div><div class="polaroid-back"><h3>Sweet Day 🍓</h3><p>Every single moment with you will always be cherished by me.</p></div></div></div>
+      <div class="polaroid-card" onclick="this.classList.toggle('flipped')"><div class="polaroid-inner"><div class="polaroid-front"><img src="images/photo4.jpg" alt="Memory 4"><h3>The LOML ⭐</h3></div><div class="polaroid-back"><h3>Forever ⭐</h3><p>Through the ups and downs of life i promise that it will always be you and me.</p></div></div></div>
+    </section>
+    <div style="margin-top: 40px; margin-bottom: 50px;">
+      <button onclick="showHome()">🏠 Back Home</button>
+    </div>
+  </div>
+<script>
+  // --- 1. Navigation & Canvas ---
+  const canvas = document.getElementById('sparkleCanvas');
+  const ctx = canvas.getContext('2d');
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  function triggerSparkleBurst() {
+    const particles = [];
+    for (let i = 0; i < 50; i++) {
+      particles.push({
+        x: window.innerWidth / 2, y: window.innerHeight / 2,
+        vx: (Math.random() - 0.5) * 15, vy: (Math.random() - 0.5) * 15, alpha: 1
+      });
+    }
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy; p.alpha -= 0.02;
+        ctx.fillStyle = `rgba(255, 182, 193, ${p.alpha})`;
+        ctx.beginPath(); ctx.arc(p.x, p.y, 8, 0, Math.PI * 2); ctx.fill();
+      });
+      if (particles[0].alpha > 0) requestAnimationFrame(animate);
+    }
+    animate();
+  }
+
+  function showGallery() { triggerSparkleBurst(); document.getElementById('home-page').style.display = 'none'; document.getElementById('gallery-page').style.display = 'block'; }
+  function showHome() { triggerSparkleBurst(); document.getElementById('home-page').style.display = 'block'; document.getElementById('gallery-page').style.display = 'none'; }
+
+  // --- 2. Night Mode ---
+  function toggleTheme() {
+    document.body.classList.toggle('night-mode');
+    const button = document.getElementById('themeToggle');
+    if (button) button.innerText = document.body.classList.contains('night-mode') ? '☀️ Day' : '🌙 Night';
+  }
+
+  function createStars() {
+    for (let i = 0; i < 50; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.top = Math.random() * 100 + 'vh';
+      document.body.appendChild(star);
+    }
+  }
+  createStars();
+
+  // --- 3. Petals ---
+  function createPetal() {
+    const petal = document.createElement('div');
+    petal.innerHTML = Math.random() > 0.5 ? '🌸' : '💖';
+    petal.className = 'petal';
+    petal.style.left = Math.random() * 100 + 'vw';
+    petal.style.animationDuration = Math.random() * 5 + 10 + 's';
+    document.body.appendChild(petal);
+  }
+  setInterval(createPetal, 800);
+
+  // --- 4. Lyric Sync ---
+  const audio = document.getElementById('bgMusic');
+  const lines = document.querySelectorAll('.lyric-line');
+  let currentActive = null;
+  audio.ontimeupdate = () => {
+    lines.forEach((line) => {
+      const startTime = parseFloat(line.getAttribute('data-time'));
+      const nextLine = line.nextElementSibling;
+      const endTime = nextLine ? parseFloat(nextLine.getAttribute('data-time')) : audio.duration;
+      if (audio.currentTime >= startTime && audio.currentTime < endTime && currentActive !== line) {
+        lines.forEach(l => l.classList.remove('active'));
+        line.classList.add('active');
+        line.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        currentActive = line;
+      }
+    });
+  };
+</script>
+  <script>
+  function createPetal() {
+    const petal = document.createElement('div');
+    petal.innerHTML = Math.random() > 0.5 ? '🌸' : '💖';
+    petal.className = 'petal';
+    petal.style.left = Math.random() * 100 + 'vw';
+    petal.style.animationDuration = Math.random() * 5 + 5 + 's';
+    petal.style.fontSize = Math.random() * 10 + 10 + 'px';
+    document.body.appendChild(petal);
+    setTimeout(() => petal.remove(), 10000);
+  }
+  setInterval(createPetal, 800);
+
+</script>
+</body>
+</html>
